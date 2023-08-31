@@ -9,11 +9,15 @@ let count = 0;
 
 
 increment.addEventListener('click', () => {
-    output.textContent = count++;
+    output.textContent = ++count;
 })
 
 decrement.addEventListener('click', () => {
-    output.textContent = count--;
+    if (count < 0) {
+        return
+    } else {
+        output.textContent = count--;
+    }
 })
 
 reset.addEventListener('click', () => {
